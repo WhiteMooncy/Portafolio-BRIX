@@ -5,6 +5,9 @@ on:
     - cron: '0 6 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -13,7 +16,7 @@ jobs:
 
       - name: Fetch count from Apps Script
         run: |
-          RESPONSE=$(curl -sL "${{ secrets.APP_SCRIPT_URL }}")
+          RESPONSE=$(curl -sf --max-time 15 "${{ secrets.APP_SCRIPT_URL }}" || echo '{"users":"0"}')
           echo "$RESPONSE" > counter.json
           echo "Response: $RESPONSE"
 
@@ -21,5 +24,6 @@ jobs:
         run: |
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add counter.json
           git diff --staged --quiet || (git commit -m "chore: update visitor count" && git push)
