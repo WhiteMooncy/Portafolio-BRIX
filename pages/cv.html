@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV · Mateo Villablanca · Desarrollador Full Stack Junior</title>
+  <meta name="description" content="Curriculum vitae de Mateo Villablanca (WhiteMooncy) — Desarrollador Full Stack Junior con experiencia en HTML, CSS, JavaScript, Python, PHP y MySQL. Técnico en Programación y Análisis de Sistemas (AIEP), Chile.">
+  <meta name="keywords" content="CV, curriculum vitae, Mateo Villablanca, WhiteMooncy, desarrollador web, full stack, HTML, CSS, JavaScript, Python, PHP, MySQL, AIEP, Chile, Putaendo">
+  <meta name="author" content="Mateo Villablanca">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://whitemooncy.me/pages/cv.html">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="CV · Mateo Villablanca · Desarrollador Full Stack Junior">
+  <meta property="og:description" content="Curriculum vitae de Mateo Villablanca (WhiteMooncy) — Desarrollador Full Stack Junior, Técnico en Programación y Análisis de Sistemas (AIEP), Chile.">
+  <meta property="og:url" content="https://whitemooncy.me/pages/cv.html">
+  <meta property="og:site_name" content="WhiteMooncy · Portafolio">
+  <meta property="og:image" content="https://whitemooncy.me/assets/favicon.svg">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="WhiteMooncy logo">
+  <meta property="og:locale" content="es_CL">
+  <meta name="geo.region" content="CL-VS">
+  <meta name="geo.placename" content="Putaendo, Región de Valparaíso, Chile">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    *,*::before,*::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: #f5f2ee;
+      color: #1a0004;
+      font-family: var(--font-primary);
+      line-height: 1.5;
+      padding: 24px 16px;
+    }
+
+    /* Toolbar (only on screen) */
+    .toolbar {
+      position: fixed;
+      top: 16px; right: 16px;
+      display: flex; gap: 8px;
+      z-index: 10;
+    }
+    .toolbar button {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px;
+      background: #ff416c;
+      color: #fff;
+      border: 2px solid #ff416c;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255,65,108,0.3);
+    }
+    .toolbar button:hover { background: #cc3552; border-color: #cc3552; transform: translateY(-2px); }
+
+    .page {
+      width: 100%;
+      max-width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 6px 28px rgba(0,0,0,0.12);
+      display: grid;
+      grid-template-columns: 35% 1fr;
+    }
+
+    /* Left sidebar (rojo con sakura) */
+    aside {
+      background: linear-gradient(160deg, #870018 0%, #3d0008 65%, #1a0004 100%);
+      color: #fff;
+      padding: 36px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    aside::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -60px;
+      width: 280px; height: 280px;
+      background: url('../assets/sakura-branch.png') center/contain no-repeat;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    aside::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(170deg, transparent 0%, rgba(13,0,2,0.95) 80%);
+      pointer-events: none;
+    }
+    .photo-card {
+      position: relative; z-index: 1;
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff416c, #ff9db1);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-primary);
+      font-weight: 800;
+      font-size: 64px;
+      color: #fff;
+      margin: 0 0 28px;
+      box-shadow: 0 0 40px rgba(255,65,108,0.5);
+      letter-spacing: -2px;
+    }
+    aside h1 {
+      position: relative; z-index: 1;
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin: 0 0 4px;
+      letter-spacing: -0.01em;
+    }
+    aside .role {
+      position: relative; z-index: 1;
+      color: #ff9db1;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin: 0 0 28px;
+    }
+
+    aside h2 {
+      position: relative; z-index: 1;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #ff9db1;
+      text-transform: uppercase;
+      margin: 24px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,157,177,0.3);
+    }
+
+    aside ul { position: relative; z-index: 1; list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    aside ul li { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: rgba(255,255,255,0.92); word-break: break-word; }
+    aside ul li i { color: #ff416c; width: 16px; text-align: center; flex-shrink: 0; }
+    aside ul li a { color: rgba(255,255,255,0.92); text-decoration: none; }
+    aside ul li a:hover { color: #ff9db1; text-decoration: underline; }
+
+    .skill { margin-bottom: 14px; position: relative; z-index: 1; }
+    .skill .head { display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 600; margin-bottom: 4px; }
+    .skill .head .pct { color: #ff9db1; }
+    .skill .bar { width: 100%; height: 6px; background: rgba(255,255,255,0.12); border-radius: 9999px; overflow: hidden; }
+    .skill .fill { height: 100%; background: linear-gradient(90deg, #ff416c, #ff9db1); border-radius: 9999px; }
+
+    .langs { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 6px; font-size: 0.85rem; }
+    .lang { display: flex; justify-content: space-between; }
+    .lang .level { color: #ff9db1; font-weight: 600; }
+
+    /* Right content */
+    main.cv { padding: 40px 36px; }
+    section { margin-bottom: 28px; }
+    section h2 {
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: #ff416c;
+      text-transform: uppercase;
+      margin: 0 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #ff416c;
+      display: flex; align-items: center; gap: 8px;
+    }
+    section h2 i { font-size: 1rem; }
+
+    .summary {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #2a0008;
+      margin: 0;
+    }
+    .summary strong { color: #870018; }
+
+    .entry { margin-bottom: 22px; padding-left: 18px; border-left: 2px solid #fad0d5; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+    .entry h3 { font-size: 1rem; font-weight: 700; margin: 0; color: #1a0004; }
+    .entry .where { font-size: 0.85rem; color: #870018; font-weight: 600; }
+    .entry .when { font-size: 0.78rem; color: #888; white-space: nowrap; }
+    .entry p { font-size: 0.88rem; color: #4a4a4a; margin: 6px 0 0; line-height: 1.6; }
+    .entry ul { font-size: 0.88rem; color: #4a4a4a; padding-left: 18px; margin: 6px 0 0; }
+    .entry ul li { margin-bottom: 4px; }
+
+    .projects-list { display: flex; flex-direction: column; gap: 14px; }
+    .proj { padding: 12px 14px; background: #fdf6f8; border-left: 3px solid #ff416c; border-radius: 4px; }
+    .proj h3 { font-size: 0.95rem; font-weight: 700; margin: 0 0 4px; color: #1a0004; }
+    .proj p { font-size: 0.85rem; color: #4a4a4a; margin: 0 0 6px; }
+    .proj .tech { font-size: 0.75rem; color: #870018; font-weight: 600; }
+
+    /* Print */
+    @media print {
+      body { padding: 0; background: #fff; }
+      .toolbar { display: none; }
+      .page { box-shadow: none; max-width: none; min-height: auto; margin: 0; }
+      @page { size: A4; margin: 0; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button onclick="window.print()"><i class="fas fa-print"></i> Imprimir / Guardar PDF</button>
+  </div>
+
+  <div class="page">
+    <aside>
+      <div class="photo-card">MV</div>
+      <h1>Matteo Villablanca</h1>
+      <p class="role">Full Stack Developer (Junior)</p>
+
+      <h2>Contacto</h2>
+      <ul>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:mateo.villablanca.gall@gmail.com">mateo.villablanca.gall@gmail.com</a></li>
+        <li><i class="fas fa-map-marker-alt"></i> Putaendo, Chile</li>
+        <li><i class="fab fa-github"></i> <a href="https://github.com/WhiteMooncy">github.com/WhiteMooncy</a></li>
+        <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/whitemooncy">linkedin.com/in/whitemooncy</a></li>
+        <li><i class="fas fa-globe"></i> <a href="https://whitemooncy.me">whitemooncy.me</a></li>
+      </ul>
+
+      <h2>Habilidades</h2>
+      <div class="skill"><div class="head"><span>HTML &amp; CSS</span><span class="pct">90%</span></div><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+      <div class="skill"><div class="head"><span>JavaScript</span><span class="pct">50%</span></div><div class="bar"><div class="fill" style="width:50%"></div></div></div>
+      <div class="skill"><div class="head"><span>Python</span><span class="pct">60%</span></div><div class="bar"><div class="fill" style="width:60%"></div></div></div>
+      <div class="skill"><div class="head"><span>PHP &amp; MySQL</span><span class="pct">65%</span></div><div class="bar"><div class="fill" style="width:65%"></div></div></div>
+      <div class="skill"><div class="head"><span>Git &amp; GitHub</span><span class="pct">70%</span></div><div class="bar"><div class="fill" style="width:70%"></div></div></div>
+      <div class="skill"><div class="head"><span>Linux / Wazuh</span><span class="pct">55%</span></div><div class="bar"><div class="fill" style="width:55%"></div></div></div>
+
+      <h2>Idiomas</h2>
+      <div class="langs">
+        <div class="lang"><span>Español</span><span class="level">Nativo</span></div>
+        <div class="lang"><span>Inglés</span><span class="level">Intermedio</span></div>
+      </div>
+    </aside>
+
+    <main class="cv">
+      <section>
+        <h2><i class="fas fa-user"></i> Sobre mí</h2>
+        <p class="summary">
+          <strong>Técnico de Nivel Superior titulado</strong> en Programación y Análisis de Sistemas (AIEP),
+          actualmente cursando Ingeniería. Experiencia en desarrollo web full stack y en operaciones de
+          ciberseguridad con Wazuh en entornos Linux. Construyo experiencias digitales funcionales
+          combinando frontend, backend e infraestructura.
+        </p>
+      </section>
+
+      <section>
+        <h2><i class="fas fa-briefcase"></i> Experiencia</h2>
+        <div class="entry">
+          <div class="top">
+            <h3>Analista SOC · Ciberseguridad</h3>
+            <span class="when">2026</span>
+          </div>
+          <span class="where">Emtec Group — Team SOC</span>
+          <p>Operaciones de ciberseguridad en entorno Linux con <strong>Wazuh</strong> (SIEM/XDR): monitoreo de eventos, análisis de alertas y respuesta a incidentes. Desarrollo y publicación de sitios informativos internos para la empresa mediante <strong>Google Sites</strong>.</p>
+        </div>
+        <div class="entry">
+          <div class="top">
+            <h3>Desarrollador y Analista</h3>
+            <span class="when">Ene 2025 – Feb 2025</span>
+          </div>
+          <span class="where">Emtec Group</span>
+          <p>Administración y mapeo de datos relacionados con máquinas virtuales. Colaboración en la documentación de infraestructura del cliente.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2><i class="fas fa-graduation-cap"></i> Educación</h2>
+        <div class="entry">
+          <div class="top">
+            <h3>Ingeniería de Ejecución en Informática</h3>
+            <span class="when">2025 – En curso</span>
+          </div>
+          <span class="where">Instituto Profesional AIEP · Mención Desarrollo de Sistemas · Primer año</span>
+          <p>Continuación directa del técnico. Profundización en arquitectura de software, ingeniería de sistemas y desarrollo avanzado de aplicaciones.</p>
+        </div>
+        <div class="entry">
+          <div class="top">
+            <h3>Técnico de Nivel Superior en Programación y Análisis de Sistemas</h3>
+            <span class="when">Titulado · 2025</span>
+          </div>
+          <span class="where">Instituto Profesional AIEP · San Felipe</span>
+          <p>Título obtenido. Formación en desarrollo web, bases de datos, análisis de requerimientos y administración de sistemas.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2><i class="fas fa-rocket"></i> Proyectos destacados</h2>
+        <div class="projects-list">
+          <div class="proj">
+            <h3>Proyecto Hydro-Conecta</h3>
+            <p>Plataforma web para monitoreo y conexión de servicios hidráulicos · landing pública + admin backend.</p>
+            <span class="tech">HTML · CSS · JavaScript · Python · PHP</span>
+          </div>
+          <div class="proj">
+            <h3>Cafetería · Web Admin</h3>
+            <p>Sitio web administrativo con catálogo, gestión de stock y panel de pedidos.</p>
+            <span class="tech">HTML · CSS · JavaScript · PHP · MySQL</span>
+          </div>
+          <div class="proj">
+            <h3>Akelarre</h3>
+            <p>Sitio temático con identidad visual fuerte, animaciones CSS y diseño editorial.</p>
+            <span class="tech">HTML · CSS · JavaScript</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Matteo profile placeholder">
+  <defs>
+    <radialGradient id="abg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#3d0008"></stop>
+      <stop offset="100%" stop-color="#0d0002"></stop>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" rx="24" fill="url(#abg)"></rect>
+  
+  <circle cx="200" cy="170" r="78" fill="#fde9d3"></circle>
+  <path d="M122 170 a78 78 0 0 1 156 0 v-26 a78 78 0 0 0 -156 0z" fill="#1a1a1a"></path>
+  <path d="M110 330 q90 -100 180 0 v50 h-180z" fill="#ff416c"></path>
+  <path d="M110 340 q90 -90 180 0 v40 h-180z" fill="#1a0004" opacity="0.4"></path>
+  
+  <g fill="#ff9db1" opacity="0.5">
+    <ellipse cx="60" cy="80" rx="6" ry="10" transform="rotate(20 60 80)"></ellipse>
+    <ellipse cx="340" cy="120" rx="8" ry="12" transform="rotate(-30 340 120)"></ellipse>
+    <ellipse cx="80" cy="280" rx="6" ry="10" transform="rotate(60 80 280)"></ellipse>
+    <ellipse cx="350" cy="310" rx="7" ry="11" transform="rotate(-20 350 310)"></ellipse>
+  </g>
+  <text x="200" y="392" text-anchor="middle" font-family="Poppins, sans-serif" font-size="10" fill="#e8d5db" opacity="0.55">PLACEHOLDER · reemplazar con photo.webp</text>
+</svg>

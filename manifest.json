@@ -1,0 +1,44 @@
+{
+  "id": "/",
+  "name": "WhiteMooncy · Portafolio",
+  "short_name": "WhiteMooncy",
+  "description": "Portafolio de WhiteMooncy: desarrollador full stack junior, proyectos web y contacto.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#140003",
+  "theme_color": "#ff416c",
+  "lang": "es-CL",
+  "dir": "ltr",
+  "categories": ["portfolio", "personal"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Proyectos",
+      "short_name": "Proyectos",
+      "description": "Ver mis proyectos web",
+      "url": "/#proyectos"
+    },
+    {
+      "name": "Contacto",
+      "short_name": "Contacto",
+      "description": "Ponerse en contacto con WhiteMooncy",
+      "url": "/#contacto"
+    },
+    {
+      "name": "Curriculum Vitae",
+      "short_name": "CV",
+      "description": "Ver y descargar el curriculum vitae",
+      "url": "/pages/cv.html"
+    }
+  ]
+}

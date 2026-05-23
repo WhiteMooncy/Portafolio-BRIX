@@ -1,0 +1,25 @@
+name: Update visitor count
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch count from Apps Script
+        run: |
+          RESPONSE=$(curl -sL "${{ secrets.APP_SCRIPT_URL }}")
+          echo "$RESPONSE" > counter.json
+          echo "Response: $RESPONSE"
+
+      - name: Commit and push
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add counter.json
+          git diff --staged --quiet || (git commit -m "chore: update visitor count" && git push)

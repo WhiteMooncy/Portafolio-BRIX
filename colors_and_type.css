@@ -1,0 +1,331 @@
+/* ============================================================
+   WhiteMooncy / Matteo Villablanca · Portafolio
+   colors_and_type.css — Tokens base + estilos semánticos
+   Tema actual: ROSA HOT (#ff416c) sobre rojo oscuro + sakura
+   Fuente: WhiteMooncy/PORTAFOLIO @ refactor · design-tokens.css
+   ============================================================ */
+
+/* Fuentes cargadas desde <head> en index.html para mejor rendimiento (LCP/FCP) */
+
+:root {
+  /* ============================================================
+     COLOR — PALETA PRIMARIA (rosa hot / rojo)
+     ============================================================ */
+  --color-primary:         #ff416c;
+  --color-primary-light:   #ff7c9f;
+  --color-primary-lighter: #ff9db1;
+  --color-primary-dark:    #cc3552;
+  --color-primary-darker:  #870018;
+
+  --color-accent:       #ff416c;
+  --color-accent-hover: #cc3552;
+
+  /* Escala legacy "Tradewind" (mantenida por compat — ahora roja) */
+  --color-tradewind-50:  #ffe4e9;
+  --color-tradewind-100: #ffccd6;
+  --color-tradewind-200: #ff9db1;
+  --color-tradewind-300: #ff7c9f;
+  --color-tradewind-400: #ff4f7c;
+  --color-tradewind-500: #ff416c;
+  --color-tradewind-600: #e63c5c;
+  --color-tradewind-700: #cc3552;
+  --color-tradewind-800: #b32d47;
+  --color-tradewind-900: #870018;
+  --color-tradewind-950: #3d0008;
+
+  /* ============================================================
+     COLOR — TEXTO (sobre fondos oscuros — todo blanco/rosado claro)
+     ============================================================ */
+  --color-text-primary:   #ffffff;
+  --color-text-secondary: #e8d5db;
+  --color-text-tertiary:  #f4dfe4;
+  --color-text-muted:     #c0a9b0;
+  --color-text-inverse:   #ffffff;
+
+  /* Alias cortos */
+  --fg-1: #ffffff;
+  --fg-2: #e8d5db;
+  --fg-3: #f4dfe4;
+  --fg-muted: #c0a9b0;
+
+  /* ============================================================
+     COLOR — FONDOS (semi-transparentes rojo profundo)
+     ============================================================ */
+  --color-bg-primary:   rgba(15, 0, 0, 0.35);
+  --color-bg-secondary: rgba(70, 0, 10, 0.5);
+  --color-bg-tertiary:  rgba(139, 0, 21, 0.3);
+  --color-bg-code:      #f5f5f5;
+  --color-bg-dark:      #1a0004;
+  --color-bg-dark-alt:  #0d0002;
+
+  /* Alias cortos */
+  --bg-1: rgba(15, 0, 0, 0.35);
+  --bg-2: rgba(70, 0, 10, 0.5);
+  --bg-3: rgba(139, 0, 21, 0.3);
+  --bg-dark: #1a0004;
+  --bg-darker: #0d0002;
+
+  /* Fondo de página: el gradiente "noche" del body */
+  --page-bg: linear-gradient(135deg,
+    #6b0013 0%, #52000f 12%, #3a000b 25%, #270007 40%,
+    #160004 55%, #0a0002 72%, #040001 88%, #000000 100%
+  );
+
+  /* Glass cards (sobre fondo oscuro: usar transparencias blancas) */
+  --glass-card-bg:     rgba(255, 255, 255, 0.06);
+  --glass-card-border: rgba(255, 255, 255, 0.10);
+  --glass-card-hover:  rgba(255, 65, 108, 0.40); /* rosa al hover */
+
+  /* Navbar glass */
+  --navbar-bg:         rgba(4, 0, 1, 0.55);
+  --navbar-border:     rgba(255, 79, 124, 0.10);
+
+  /* ============================================================
+     COLOR — BORDES (rosados translúcidos)
+     ============================================================ */
+  --color-border-light: rgba(255, 157, 177, 0.30);
+  --color-border:       rgba(255, 157, 177, 0.50);
+  --color-border-dark:  rgba(255, 79, 124, 0.30);
+
+  /* ============================================================
+     COLOR — ESTADOS
+     ============================================================ */
+  --color-success: #10b981;
+  --color-success-light: #d1fae5;
+  --color-warning: #f7b731;
+  --color-warning-light: #fef3c7;
+  --color-error:   #ef4444;
+  --color-error-light: #fee2e2;
+  --color-info:    #3b82f6;
+  --color-info-light: #dbeafe;
+
+  /* Redes sociales */
+  --color-linkedin: #0077b5;
+  --color-github:   #333333;
+  --color-discord:  #5865f2;
+
+  /* ============================================================
+     GRADIENTES
+     ============================================================ */
+  --gradient-primary:    linear-gradient(135deg, #ff416c 0%, #ff7c9f 100%);
+  --gradient-background: linear-gradient(135deg, rgba(139,0,21,0.98) 0%, rgba(70,0,10,0.95) 100%);
+  --gradient-dark:       linear-gradient(135deg, #1a0004 0%, #0d0002 100%);
+  --gradient-text:       linear-gradient(90deg, #ff416c 0%, #cc3552 100%);
+  /* Gradiente del wordmark "WhiteMooncy" */
+  --gradient-logo:       linear-gradient(135deg, #ff416c 0%, #ff9db1 100%);
+  /* Gradiente del CV button */
+  --gradient-cv:         linear-gradient(135deg, rgba(255,65,108,0.25), rgba(255,157,177,0.15));
+  --gradient-cv-hover:   linear-gradient(135deg, #ff416c, #ff4f7c);
+
+  /* ============================================================
+     TIPOGRAFÍA — Poppins · única familia
+     ============================================================ */
+  --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-code:    'Fira Code', 'Courier New', monospace;
+
+  /* Escala modular ratio 1.250 */
+  --text-xs:  0.75rem;
+  --text-sm:  0.875rem;
+  --text-base: 1rem;
+  --text-lg:  1.125rem;
+  --text-xl:  1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  --font-normal:   400;
+  --font-medium:   500;
+  --font-semibold: 600;
+  --font-bold:     700;
+
+  --leading-none:    1;
+  --leading-tight:   1.25;
+  --leading-snug:    1.375;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose:   2;
+
+  --tracking-tighter: -0.05em;
+  --tracking-tight:   -0.025em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.025em;
+  --tracking-wider:   0.05em;
+  --tracking-widest:  0.1em;
+
+  /* ============================================================
+     ESPACIADO — 8pt grid
+     ============================================================ */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ============================================================
+     SOMBRAS
+     ============================================================ */
+  --shadow-xs:   0 1px 2px  rgba(0,0,0,0.05);
+  --shadow-sm:   0 2px 4px  rgba(0,0,0,0.06);
+  --shadow-base: 0 4px 6px  rgba(0,0,0,0.07);
+  --shadow-md:   0 6px 12px rgba(0,0,0,0.08);
+  --shadow-lg:   0 8px 16px rgba(0,0,0,0.09);
+  --shadow-xl:   0 12px 24px rgba(0,0,0,0.10);
+  --shadow-2xl:  0 16px 32px rgba(0,0,0,0.12);
+
+  /* Sombras con color de marca (CTA, hover) */
+  --shadow-primary:    0 4px 12px rgba(255,65,108,0.30);
+  --shadow-primary-lg: 0 8px 24px rgba(255,65,108,0.40);
+  /* Glow del CV button hover */
+  --shadow-cv-hover:   0 0 25px rgba(255,65,108,0.5), 0 0 50px rgba(255,65,108,0.25);
+  /* Sombra rosa de la project-card hover */
+  --shadow-card-hover: 0 12px 28px rgba(255,65,108,0.15);
+  /* Navbar */
+  --shadow-nav: 0 4px 20px rgba(0,0,0,0.08);
+
+  /* ============================================================
+     RADIOS
+     ============================================================ */
+  --radius-none: 0;
+  --radius-sm:   0.25rem;
+  --radius-base: 0.375rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   0.75rem;
+  --radius-xl:   1rem;
+  --radius-2xl:  1.5rem;
+  --radius-pill: 60px;
+  --radius-full: 9999px;
+
+  /* ============================================================
+     TRANSICIONES
+     ============================================================ */
+  --duration-fast:   150ms;
+  --duration-base:   200ms;
+  --duration-medium: 300ms;
+  --duration-slow:   500ms;
+
+  --ease-out:    cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  --transition-fast:   all 150ms cubic-bezier(0, 0, 0.2, 1);
+  --transition-base:   all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ============================================================
+     EFECTOS
+     ============================================================ */
+  --backdrop-blur:    blur(20px);
+  --backdrop-blur-sm: blur(8px);
+  --backdrop-color: rgba(0,0,0,0.5);
+
+  /* ============================================================
+     LAYOUT
+     ============================================================ */
+  --header-height: 110px;
+  --header-height-mobile: 80px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+}
+
+/* ============================================================
+   DARK THEME — preferencia del sistema (el body ya es oscuro,
+   el dark mode mantiene la misma paleta con micro-ajustes)
+   ============================================================ */
+[data-theme='dark'] {
+  --color-bg-code: #1e293b;
+  --shadow-primary:    0 4px 12px rgba(255,65,108,0.20);
+  --shadow-primary-lg: 0 8px 24px rgba(255,65,108,0.30);
+}
+
+/* ============================================================
+   ESTILOS SEMÁNTICOS BASE
+   ============================================================ */
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--fg-1);
+  background: var(--page-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, .h1 {
+  font-family: var(--font-primary);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--fg-1);
+  margin: 0 0 var(--space-2);
+}
+
+h2, .h2 {
+  font-family: var(--font-primary);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  color: var(--fg-1);
+  margin: 0 0 var(--space-4);
+}
+
+h3, .h3 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-snug);
+  color: var(--fg-1);
+  margin: 0 0 var(--space-3);
+}
+
+h4, .h4 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-snug);
+  color: var(--fg-1);
+  margin: 0 0 var(--space-2);
+}
+
+p, .body {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--fg-2);
+  margin: 0 0 var(--space-4);
+}
+
+.lead { font-size: var(--text-lg); line-height: var(--leading-relaxed); color: var(--fg-2); }
+small, .caption { font-size: var(--text-xs); color: var(--fg-muted); }
+
+code, kbd, pre { font-family: var(--font-code); font-size: 0.95em; }
+code { background: var(--color-bg-code); padding: 0.15em 0.4em; border-radius: var(--radius-sm); color: var(--color-primary); }
+
+a { color: var(--color-primary); text-decoration: none; transition: var(--transition-fast); }
+a:hover { color: var(--color-primary-light); }
+
+/* Greeting chico sobre el H1 del hero ("Hola, soy Matteo") */
+.hero-greeting {
+  font-size: 1rem;
+  font-weight: var(--font-medium);
+  color: var(--color-primary-light);
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: 0.25rem;
+}
+
+/* Wordmark del logo con gradiente */
+.logo-wordmark {
+  background: var(--gradient-logo);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: var(--font-bold);
+}
