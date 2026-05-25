@@ -1,0 +1,4 @@
+Contact: mailto:mateo.villablanca.gall@gmail.com
+Expires: 2027-05-25T00:00:00.000Z
+Preferred-Languages: es, en
+Canonical: https://whitemooncy.me/.well-known/security.txt
